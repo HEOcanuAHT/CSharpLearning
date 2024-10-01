@@ -1,4 +1,4 @@
-﻿namespace Два_автомобиля
+﻿namespace Two_Cars
 {
     internal class Program
     {
