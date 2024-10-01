@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "division", "деление (с остатком)\division.csproj", "{646B8CB5-EA0E-4595-B1C6-A33D8ACEF981}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "division", "division\division.csproj", "{646B8CB5-EA0E-4595-B1C6-A33D8ACEF981}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Two cars", "Два автомобиля\Two cars.csproj", "{9A0C9826-C4EC-42B2-96F6-A9F887A098D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Two cars", "Two cars\Two cars.csproj", "{9A0C9826-C4EC-42B2-96F6-A9F887A098D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
