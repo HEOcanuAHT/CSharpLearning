@@ -1,4 +1,4 @@
-﻿namespace деление__с_остатком_
+﻿namespace division
 {
     internal class Program
     {
