@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "деление (с остатком)", "деление (с остатком)\деление (с остатком).csproj", "{646B8CB5-EA0E-4595-B1C6-A33D8ACEF981}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Два автомобиля", "Два автомобиля\Два автомобиля.csproj", "{9A0C9826-C4EC-42B2-96F6-A9F887A098D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{646B8CB5-EA0E-4595-B1C6-A33D8ACEF981}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{646B8CB5-EA0E-4595-B1C6-A33D8ACEF981}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{646B8CB5-EA0E-4595-B1C6-A33D8ACEF981}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A0C9826-C4EC-42B2-96F6-A9F887A098D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A0C9826-C4EC-42B2-96F6-A9F887A098D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A0C9826-C4EC-42B2-96F6-A9F887A098D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A0C9826-C4EC-42B2-96F6-A9F887A098D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
