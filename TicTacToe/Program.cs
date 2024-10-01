@@ -1,27 +1,28 @@
-﻿using System.Linq.Expressions;
-using System.Security.Cryptography;
-
-namespace TicTacToe
+﻿namespace TicTacToe
 {
     internal class Program
     {
         static int[,] field = new int[3,3];
-        static bool isGameOver = false;
         static bool isTurnX = true;
+        static bool isGameOver = false;
+        static string winer = "";
+
         static void Main(string[] args)
         {
-            //Console.WriteLine("Hello, World!");
             while (!isGameOver) 
             {
                 PrintField();
                 CalcTurn();
-            }  
+            }
+            PrintField();
+            Console.WriteLine("Игра окончена, " + (winer.Length == 0 ? "ничья!" : "победили " + winer));
         }
         static void PrintField()
         {
             Console.Clear();
             Console.WriteLine("Используйте numpad. Ходят " + (isTurnX ? "X" : "O"));
-            
+            Console.WriteLine();
+
             for (int i = 2; i >= 0; i--)
             {
                 if (i == 1) Console.WriteLine("---+---+---");
@@ -45,18 +46,21 @@ namespace TicTacToe
                 var y = turn % 3;
 
                 if (field[x, y] != 0) return;
+
                 field[x, y] = isTurnX ? 5 : 3;
+                
                 CheckConditions();
                 isTurnX = !isTurnX;
-            } catch { return; };
-
+            } 
+            catch { return; };
         }
+
         static void CheckConditions()
         {
             // обойти поле на момент выигрыша и наличие свободных мест
             bool isFreeFields = false;
-
-            int sumDiag1 = 0, sumDiag2 = 0, sumRow = 0, sumCol = 0;
+            
+            int sumDiag1 = 0, sumDiag2 = 0, sumRow, sumCol;
             
             for (int i = 0; i < field.GetLength(0); i++)
             {
@@ -75,25 +79,17 @@ namespace TicTacToe
                 if ((sumRow == 15) | (sumCol == 15) | (sumRow == 9) | (sumCol == 9))
                 {
                     isGameOver = true;
-                    PrintField();
-                    Console.WriteLine("Игра окончена, победили " + (isTurnX ? "X" : "O"));
-                    return;
+                    winer = (isTurnX ? "X" : "O");
+                    break;
                 }
             }
+
             if ((sumDiag1 == 15) | (sumDiag2 == 15) | (sumDiag1 == 9) | (sumDiag2 == 9))
             {
                 isGameOver = true;
-                PrintField();
-                Console.WriteLine("Игра окончена, победили " + (isTurnX ? "X" : "O"));
-                return;
+                winer = (isTurnX ? "X" : "O");
             }
-            if (!isFreeFields)
-            {
-                isGameOver = true;
-                PrintField();
-                Console.WriteLine("Игра окончена, ничья!");
-                return;
-            }
+            else if (!isFreeFields) isGameOver = true;
         }
     }
 }
