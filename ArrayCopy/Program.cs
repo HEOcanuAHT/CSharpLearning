@@ -7,7 +7,8 @@
             var source = new int[10];
 
             // fill
-            for (int i = 0; i < source.Length; i++) source[i] = i * i - 1;
+            Random rnd = new Random();
+            for (int i = 0; i < source.Length; i++) source[i] = rnd.Next(1, 50);
 
             var destination = new int[10];
             // copy
