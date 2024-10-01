@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "division", "division\division.csproj", "{646B8CB5-EA0E-4595-B1C6-A33D8ACEF981}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "division", "division\division.csproj", "{646B8CB5-EA0E-4595-B1C6-A33D8ACEF981}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Two cars", "Two cars\Two cars.csproj", "{9A0C9826-C4EC-42B2-96F6-A9F887A098D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Two cars", "Two cars\Two cars.csproj", "{9A0C9826-C4EC-42B2-96F6-A9F887A098D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe", "TicTacToe\TicTacToe.csproj", "{84AD96D3-7793-4B95-9BA5-CF7BD855133A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9A0C9826-C4EC-42B2-96F6-A9F887A098D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A0C9826-C4EC-42B2-96F6-A9F887A098D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A0C9826-C4EC-42B2-96F6-A9F887A098D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84AD96D3-7793-4B95-9BA5-CF7BD855133A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84AD96D3-7793-4B95-9BA5-CF7BD855133A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84AD96D3-7793-4B95-9BA5-CF7BD855133A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84AD96D3-7793-4B95-9BA5-CF7BD855133A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
