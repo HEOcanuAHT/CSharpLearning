@@ -16,6 +16,7 @@
             }
             PrintField();
             Console.WriteLine("Игра окончена, " + (winer.Length == 0 ? "ничья!" : "победили " + winer));
+            Console.Read();
         }
         static void PrintField()
         {
@@ -74,9 +75,9 @@
                     if (i==j) sumDiag1 += field[i, j];
                     if (i+j == 2) sumDiag2 += field[i, j];
 
-                    if (field[i, j] == 0 | field[j, i] == 0) isFreeFields = true;
+                    if (field[i, j] == 0 || field[j, i] == 0) isFreeFields = true;
                 }
-                if ((sumRow == 15) | (sumCol == 15) | (sumRow == 9) | (sumCol == 9))
+                if (sumRow == 15 || sumCol == 15 || sumRow == 9 || sumCol == 9)
                 {
                     isGameOver = true;
                     winer = (isTurnX ? "X" : "O");
@@ -84,12 +85,13 @@
                 }
             }
 
-            if ((sumDiag1 == 15) | (sumDiag2 == 15) | (sumDiag1 == 9) | (sumDiag2 == 9))
+            if (sumDiag1 == 15 || sumDiag2 == 15 || sumDiag1 == 9 || sumDiag2 == 9)
             {
                 isGameOver = true;
                 winer = (isTurnX ? "X" : "O");
             }
-            else if (!isFreeFields) isGameOver = true;
+            else if (!isFreeFields) 
+                isGameOver = true;
         }
     }
 }
