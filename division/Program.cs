@@ -1,15 +1,19 @@
-﻿namespace division
+﻿using homeworkLib;
+
+namespace division
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите делимое: ");
-            int a = Convert.ToInt32(Console.ReadLine());
+            int a = IO.GetNumber("Введите делимое: ");
 
-            Console.Write("Введите делитель: ");
-            int b = Convert.ToInt32(Console.ReadLine());
-
+            int b = IO.GetNumber("Введите делитель: ");
+            if (b == 0)
+            {
+                Console.WriteLine("Делить на 0 нельзя");
+                return;
+            }
             int quotient = a / b;
             int remainder = a % b;
 

@@ -9,7 +9,6 @@
 
             Reverse(ref numbers);
             PrintNumbers(numbers);
-
         }
         static int[] GenerateNumbers(int lenght = 10)
         {
@@ -22,7 +21,7 @@
         }
         static void PrintNumbers(int[] numbers)
         {
-            Console.WriteLine("источник [{0}]", string.Join(", ", numbers));
+            Console.WriteLine("[{0}]", string.Join(", ", numbers));
         }
         static void Reverse(ref int[] numbers)
         {

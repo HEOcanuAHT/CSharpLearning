@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            int[] ints = { 95, 922, 73, 499, 561, 61, 700, 887, 98, 150, 846 };
+            int[] ints = [95, 922, 73, 499, 561, 61, 700, 887, 98, 150, 846];
             int sum = 0;
             int min = ints[0];
 

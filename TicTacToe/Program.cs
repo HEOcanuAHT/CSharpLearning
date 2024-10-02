@@ -1,4 +1,6 @@
-﻿namespace TicTacToe
+﻿using homeworkLib;
+
+namespace TicTacToe
 {
     internal class Program
     {
@@ -14,16 +16,20 @@
                 PrintField();
                 CalcTurn();
             }
+            
             PrintField();
             Console.WriteLine("Игра окончена, " + (winer.Length == 0 ? "ничья!" : "победили " + winer));
-            Console.Read();
+            Console.WriteLine("Нажмите esc чтобы выйти");
+            ConsoleKeyInfo presed = new ConsoleKeyInfo();
+            
+            while (presed.Key != ConsoleKey.Escape)
+                presed = Console.ReadKey();
+
         }
         static void PrintField()
         {
             Console.Clear();
-            Console.WriteLine("Используйте numpad. Ходят " + (isTurnX ? "X" : "O"));
-            Console.WriteLine();
-
+            
             for (int i = 2; i >= 0; i--)
             {
                 if (i == 1) Console.WriteLine("---+---+---");
@@ -40,20 +46,16 @@
 
         static void CalcTurn()
         {
-            try
-            {
-                var turn = (Convert.ToInt32(Console.ReadLine()) - 1);
-                var x = turn / 3;
-                var y = turn % 3;
+            int turn = IO.GetNumber("Используйте numpad. Ходят " + (isTurnX ? "X" : "O"), 1, 9) -1;
+            var x = turn / 3;
+            var y = turn % 3;
 
-                if (field[x, y] != 0) return;
+            if (field[x, y] != 0) return;
 
-                field[x, y] = isTurnX ? 5 : 3;
-                
-                CheckConditions();
-                isTurnX = !isTurnX;
-            } 
-            catch { return; };
+            field[x, y] = isTurnX ? 5 : 3;
+               
+            CheckConditions();
+            isTurnX = !isTurnX;
         }
 
         static void CheckConditions()

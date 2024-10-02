@@ -1,19 +1,22 @@
-﻿namespace Two_Cars
+﻿using homeworkLib;
+
+namespace Two_Cars
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите скорость первого автомобиля: ");
-            int V1 = Convert.ToInt32(Console.ReadLine());
+            int V1 = IO.GetNumber("Введите скорость первого автомобиля: ");
 
-            Console.Write("Введите скорость второго автомобиля: ");
-            int V2 = Convert.ToInt32(Console.ReadLine());
+            int V2 = IO.GetNumber("Введите скорость второго автомобиля: ");
 
-            if (V1 == V2) {Console.WriteLine("Скорости автомобилей совпадают, никто никого не опередит!"); return; };
+            if (V1 == V2) 
+            {
+                Console.WriteLine("Скорости автомобилей совпадают, никто никого не опередит!"); 
+                return; 
+            };
 
-            Console.Write("Введите расстояние с которого начнем отчет: ");
-            int S = Convert.ToInt32(Console.ReadLine());
+            int S = IO.GetNumber("Введите расстояние с которого начнем отчет: ");
 
             int res = S + (Math.Abs(V1 - V2) / 2);
 
