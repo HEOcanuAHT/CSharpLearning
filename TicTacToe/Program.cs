@@ -4,7 +4,7 @@ namespace TicTacToe
 {
     internal class Program
     {
-        static int[,] field = new int[3,3];
+        static int[,] field = new int[3, 3];
         static bool isTurnX = true;
         static bool isGameOver = false;
         static string winer = "";
@@ -20,7 +20,7 @@ namespace TicTacToe
             PrintField();
             Console.WriteLine("Игра окончена, " + (winer.Length == 0 ? "ничья!" : "победили " + winer));
             Console.WriteLine("Нажмите esc чтобы выйти");
-            ConsoleKeyInfo presed = new ConsoleKeyInfo();
+            ConsoleKeyInfo presed = new();
             
             while (presed.Key != ConsoleKey.Escape)
                 presed = Console.ReadKey();
@@ -64,7 +64,7 @@ namespace TicTacToe
             bool isFreeFields = false;
             
             int sumDiag1 = 0, sumDiag2 = 0, sumRow, sumCol;
-            
+
             for (int i = 0; i < field.GetLength(0); i++)
             {
                 sumRow = 0;
