@@ -20,7 +20,7 @@ namespace Salary
             int total = 0;
             for (int i = 0; i < tabel.GetLength(0); i++)
             {
-                total += tabel[i, mounth];
+                total += tabel[i, mounth-1];
             }
             Console.WriteLine("Фонд заработной платы за указанный месяц составил: " + total);
         }
